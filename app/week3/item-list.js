@@ -65,10 +65,10 @@ const items = [
 
 const ItemList = () => {
     return (
-        <div className="bg-gray-200 p-4 w-full min-h-screen">
-            <ul className="divide-y divide-gray-500">
+        <div className="bg-gray-100 p-4 w-full min-h-screen">
+            <ul>
                 {items.map((item, index) => (
-                    <Item key={index} {...item} />
+                    <Item key={index} {...item} index={index} />
                 ))}
             </ul>
         </div>
