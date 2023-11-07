@@ -1,7 +1,6 @@
-"use client";
 import React from 'react';
-import { useUserAuth } from "./_utils/auth-context";
-import Link from 'next/link'; // Import the Link component from Next.js
+import { useUserAuth } from "../_utils/auth-context"; // Adjust the path as necessary
+import Link from 'next/link';
 
 const HomePage = () => {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
@@ -28,8 +27,6 @@ const HomePage = () => {
         <>
           <p>Welcome, {user.displayName} ({user.email})</p>
           <button onClick={handleSignOut}>Logout</button>
-          {/* Use the Link component to navigate to the shopping list page */}
-          {/* Replace `/week8/shopping-list` with the actual path to your shopping list page */}
           <Link href="/week8/shopping-list">
             <a>Go to Shopping List</a>
           </Link>
@@ -41,4 +38,4 @@ const HomePage = () => {
   );
 };
 
-export default Page;
+export default HomePage;
